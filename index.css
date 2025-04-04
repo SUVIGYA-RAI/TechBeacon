@@ -5,10 +5,12 @@ html {
   
   
   .news-card {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2), 0 0 10px rgba(13, 148, 136, 0.5);
     transition: all 0.3s ease;
   }
   
   .news-card:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2), 0 0 10px rgba(13, 148, 136, 0.5);
     transform: translateY(-8px);
   }
   
