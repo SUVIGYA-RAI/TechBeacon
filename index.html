@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TechBeacon | Latest Technology News</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  </head>
+
+  <body class="bg-gray-50 text-gray-800 font-['Inter',sans-serif]">
+
+
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+      <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+        <div class="flex items-center">
+          <h1 class="text-2xl font-bold text-teal-600">Tech<span class="text-blue-800">Beacon</span></h1>
+        </div>
+        <nav class="hidden md:flex space-x-6">
+          <a href="#" class="font-medium hover:text-teal-600 transition-colors">Home</a>
+          <a href="#" class="font-medium hover:text-teal-600 transition-colors">AI & ML</a>
+          <a href="#" class="font-medium hover:text-teal-600 transition-colors">Cybersecurity</a>
+          <a href="#" class="font-medium hover:text-teal-600 transition-colors">Startups</a>
+          <a href="#" class="font-medium hover:text-teal-600 transition-colors">Apps</a>
+        </nav>
+        <div class="flex items-center">
+          <button id="search-btn" class="p-2 rounded-full hover:bg-gray-100 transition-colors">
+            <i class="fas fa-search text-gray-600"></i>
+          </button>
+          <button id="mobile-menu-btn" class="p-2 rounded-full hover:bg-gray-100 transition-colors md:hidden">
+            <i class="fas fa-bars text-gray-600"></i>
+          </button>
+        </div>
+      </div>
+    
+
+      <div id="mobile-menu" class="hidden bg-white md:hidden">
+        <div class="container mx-auto px-4 py-2 flex flex-col space-y-3">
+          <a href="#" class="py-2 font-medium hover:text-teal-600 transition-colors">Home</a>
+          <a href="#" class="py-2 font-medium hover:text-teal-600 transition-colors">AI & ML</a>
+          <a href="#" class="py-2 font-medium hover:text-teal-600 transition-colors">Cybersecurity</a>
+          <a href="#" class="py-2 font-medium hover:text-teal-600 transition-colors">Startups</a>
+          <a href="#" class="py-2 font-medium hover:text-teal-600 transition-colors">Apps</a>
+        </div>
+      </div>
+      
+
+
+      <div id="search-bar" class="hidden bg-white border-t">
+        <div class="container mx-auto px-4 py-3">
+          <div class="relative">
+            <input type="text" placeholder="Search for tech news..." class="w-full pl-10 pr-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500">
+            <i class="fas fa-search absolute left-3 top-3 text-gray-400"></i>
+          </div>
+        </div>
+      </div>
+    </header>
+
+
+
+    <section class="bg-gradient-to-r from-blue-900 to-teal-800 text-white">
+      <div class="container mx-auto px-4 py-16">
+        <div class="flex flex-col md:flex-row items-center">
+          <div class="md:w-1/2 md:pr-12 mb-8 md:mb-0">
+            <h2 class="text-4xl font-bold mb-4" id="featured-title">Loading featured story...</h2>
+            <p class="text-lg mb-6 text-blue-100" id="featured-desc">Stay tuned for the latest breaking tech news from around the world.</p>
+            <div class="flex items-center text-sm mb-8">
+              <span id="featured-source" class="bg-teal-600 rounded-full px-3 py-1 font-semibold">TechBeacon</span>
+              <span id="featured-time" class="ml-3 text-blue-200"><i class="far fa-clock mr-1"></i> Just now</span>
+            </div>
+            <a href="#" id="featured-link" class="px-6 py-3 bg-white text-blue-900 rounded-lg font-semibold hover:bg-blue-100 transition-colors inline-flex items-center">
+              Read Full Story <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+          </div>
+          <div class="md:w-1/2">
+            <div class="rounded-xl overflow-hidden shadow-2xl">
+              <img id="featured-image" src="https://placehold.co/800x500/0f766e/FFFFFF/png?text=Loading+Featured+Article" alt="Featured article" class="w-full h-64 md:h-80 object-cover">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+
+    <section class="border-b">
+      <div class="container mx-auto px-4 py-4">
+        <div class="flex items-center justify-between">
+          <h3 class="text-xl font-bold">Latest Tech News</h3>
+          <div class="flex space-x-2">
+            <button data-category="all" class="category-btn px-3 py-1 rounded-full text-sm bg-teal-600 text-white">All</button>
+            <button data-category="technology" class="category-btn px-3 py-1 rounded-full text-sm bg-gray-200 hover:bg-gray-300">Tech</button>
+            <button data-category="ai" class="category-btn px-3 py-1 rounded-full text-sm bg-gray-200 hover:bg-gray-300">AI</button>
+            <button data-category="startup" class="category-btn px-3 py-1 rounded-full text-sm bg-gray-200 hover:bg-gray-300">Startups</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+
+
+    <section class="py-12">
+      <div class="container mx-auto px-4">
+        <div id="news-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+         
+
+          <div class="bg-white rounded-xl shadow-md overflow-hidden transform transition duration-300 hover:shadow-lg hover:-translate-y-1">
+            <div class="animate-pulse">
+              <div class="h-48 bg-gray-300"></div>
+              <div class="p-6">
+                <div class="h-4 bg-gray-300 rounded w-3/4 mb-4"></div>
+                <div class="h-3 bg-gray-300 rounded mb-2"></div>
+                <div class="h-3 bg-gray-300 rounded mb-2 w-5/6"></div>
+                <div class="h-3 bg-gray-300 rounded w-4/6"></div>
+                <div class="mt-4 flex items-center">
+                  <div class="h-5 bg-gray-300 rounded w-1/4"></div>
+                  <div class="ml-auto h-5 bg-gray-300 rounded w-1/5"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="bg-white rounded-xl shadow-md overflow-hidden transform transition duration-300 hover:shadow-lg hover:-translate-y-1">
+            <div class="animate-pulse">
+              <div class="h-48 bg-gray-300"></div>
+              <div class="p-6">
+                <div class="h-4 bg-gray-300 rounded w-3/4 mb-4"></div>
+                <div class="h-3 bg-gray-300 rounded mb-2"></div>
+                <div class="h-3 bg-gray-300 rounded mb-2 w-5/6"></div>
+                <div class="h-3 bg-gray-300 rounded w-4/6"></div>
+                <div class="mt-4 flex items-center">
+                  <div class="h-5 bg-gray-300 rounded w-1/4"></div>
+                  <div class="ml-auto h-5 bg-gray-300 rounded w-1/5"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="bg-white rounded-xl shadow-md overflow-hidden transform transition duration-300 hover:shadow-lg hover:-translate-y-1">
+            <div class="animate-pulse">
+              <div class="h-48 bg-gray-300"></div>
+              <div class="p-6">
+                <div class="h-4 bg-gray-300 rounded w-3/4 mb-4"></div>
+                <div class="h-3 bg-gray-300 rounded mb-2"></div>
+                <div class="h-3 bg-gray-300 rounded mb-2 w-5/6"></div>
+                <div class="h-3 bg-gray-300 rounded w-4/6"></div>
+                <div class="mt-4 flex items-center">
+                  <div class="h-5 bg-gray-300 rounded w-1/4"></div>
+                  <div class="ml-auto h-5 bg-gray-300 rounded w-1/5"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      
+
+
+        <div id="loading" class="flex justify-center items-center py-12 hidden">
+          <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-teal-600"></div>
+        </div>
+        
+
+
+     
+        <div class="text-center mt-12">
+          <button id="load-more" class="px-6 py-3 bg-blue-800 text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+            Load More News
+          </button>
+        </div>
+      </div>
+    </section>
+    
+   
+    <section class="bg-gray-100 py-16">
+      <div class="container mx-auto px-4">
+        <div class="max-w-xl mx-auto text-center">
+          <h3 class="text-2xl font-bold mb-4">Get the latest tech news in your inbox</h3>
+          <p class="text-gray-600 mb-6">Stay ahead of the curve with our daily tech newsletter. No spam, just the news that matters.</p>
+          <form class="flex flex-col sm:flex-row gap-3">
+            <input type="email" placeholder="Your email address" class="flex-grow px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500">
+            <button type="submit" class="px-6 py-3 bg-teal-600 text-white rounded-lg font-semibold hover:bg-teal-500 transition-colors">
+              Subscribe
+            </button>
+          </form>
+          <p class="text-xs text-gray-500 mt-4">By subscribing, you agree to our Privacy Policy and consent to receive updates from our company.</p>
+        </div>
+      </div>
+    </section>
+
+
+    <footer class="bg-blue-900 text-white">
+      <div class="container mx-auto px-4 py-12">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div>
+            <h4 class="text-xl font-bold mb-4">Tech<span class="text-teal-400">Beacon</span></h4>
+            <p class="text-blue-200 mb-4">Your daily source for the latest technology news, trends, and insights.</p>
+            <div class="flex space-x-4">
+              <a href="#" class="text-blue-200 hover:text-white"><i class="fab fa-twitter"></i></a>
+              <a href="#" class="text-blue-200 hover:text-white"><i class="fab fa-facebook"></i></a>
+              <a href="#" class="text-blue-200 hover:text-white"><i class="fab fa-linkedin"></i></a>
+              <a href="#" class="text-blue-200 hover:text-white"><i class="fab fa-instagram"></i></a>
+            </div>
+          </div>
+          <div>
+            <h5 class="font-semibold mb-4 text-teal-300">Categories</h5>
+            <ul class="space-y-2">
+              <li><a href="#" class="text-blue-200 hover:text-white">AI & Machine Learning</a></li>
+              <li><a href="#" class="text-blue-200 hover:text-white">Cybersecurity</a></li>
+              <li><a href="#" class="text-blue-200 hover:text-white">Startups</a></li>
+              <li><a href="#" class="text-blue-200 hover:text-white">Apps & Software</a></li>
+              <li><a href="#" class="text-blue-200 hover:text-white">Gadgets & Hardware</a></li>
+            </ul>
+          </div>
+          <div>
+            <h5 class="font-semibold mb-4 text-teal-300">Company</h5>
+            <ul class="space-y-2">
+              <li><a href="#" class="text-blue-200 hover:text-white">About Us</a></li>
+              <li><a href="#" class="text-blue-200 hover:text-white">Contact</a></li>
+              <li><a href="#" class="text-blue-200 hover:text-white">Careers</a></li>
+              <li><a href="#" class="text-blue-200 hover:text-white">Advertise</a></li>
+              <li><a href="#" class="text-blue-200 hover:text-white">Press</a></li>
+            </ul>
+          </div>
+          <div>
+            <h5 class="font-semibold mb-4 text-teal-300">Legal</h5>
+            <ul class="space-y-2">
+              <li><a href="#" class="text-blue-200 hover:text-white">Terms of Service</a></li>
+              <li><a href="#" class="text-blue-200 hover:text-white">Privacy Policy</a></li>
+              <li><a href="#" class="text-blue-200 hover:text-white">Cookie Policy</a></li>
+              <li><a href="#" class="text-blue-200 hover:text-white">GDPR Compliance</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="border-t border-blue-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center ">
+          <p class="text-blue-200 text-center">© 2025 TechBeacon. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="news.js"></script>
+  </body>
+</html>
